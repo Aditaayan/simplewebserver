@@ -21,87 +21,54 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
+
 ```
-from http.server import HTTPServer, BaseHTTPRequestHandler
-content = """
 <html>
-	<head>
-		<title>TOP SOFTWARE COMPANIES</title>
-	</head>
-	<body bgcolor="violet">
-	<table border="3" cellspacing="4" align="center">
-	<caption>TOP FIVE REVENUE GENERATING SOFTWARE COMPANIES </caption>		
-        <tr>
-		<th>RANK</th>
-		<th>COMPANY NAME</th>
-		<th>SALES</th>
-                <th>NATIONALITY</th>
-	</tr>
-		<tr>
-			<td>1</td>
-			<td>MICROSOFT</td>
-			<td>57.9</td>
-			<td>USA</td>
-		</tr>
+     <title> Software Companies Revenue </title>
+     <body>
+           <table border = "2" cellspacing = "10" cellpading = "6">
+              <caption>TOP FIVE REVENUE SOFTWARE COMPANIES </caption>
+              <tr>
+                  <th>S.NO</th>
+                  <th>COMPANY</th>			
+                  <th>REVENUE</th>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>IBM</td>
+                  <td>29.1 Billion</td>
+             </tr>
+             <tr>
+                  <td>2</td>
+                  <td>Oracle</td>
+                  <td>29.6 Billion</td>
+             </tr>
+             <tr>
+                  <td>3</td>
+                  <td>Microsoft</td>
+                  <td>65 Billion</td>
+            </tr>
+            <tr>
+                  <td>4</td>
+                  <td>Symantic</td>
+                  <td>5.6 Billion</td>
+            </tr>
+            <tr>
+                  <td>5</td>
+                  <td>adobe</td>
+                  <td>19.8 Billion</td>
+            </tr>
+            
+        
 
-		<tr>
-			<td>2</td>
-			<td>ORACLE</td>
-			<td>21.0</td>
-			<td>USA</td>
-
-		</tr>
-
-		<tr>
-                        
-                        <td>3</td>
-			<td>SAP</td>
-			<td>16.1</td>
-			<td>GERMANY</td>
-
-		</tr>
-                
-                <tr>
-                        
-                        <td>4</td>
-			<td>COMPUTER ASSOSIATES</td>
-			<td>4.2</td>
-			<td>USA</td>
-
-		</tr>
-                
-                <tr>
-                        
-                        <td>5</td>
-			<td>ADOBE</td>
-			<td>3.4</td>
-			<td>USA</td>
-
-		</tr>
-
-                
-	</table>
-	</body>
+       </table>
+    </body>
 </html>
-"""
-class myhandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("request received")
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-server_address = ('',8000)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
-httpd.serve_forever()
 ```
-
 
 ## OUTPUT:
-![Screenshot 2024-03-12 112957](https://github.com/user-attachments/assets/58d24d7e-3ea9-4a06-abc4-cd15fd0d9f73)
 
-![1](https://github.com/user-attachments/assets/221fd9b0-c38f-43ab-87a8-4612e8177254)
+![image](https://github.com/user-attachments/assets/9499e0f4-8f9c-45f4-9635-98727aaae9ea)
 
 
 ## RESULT:
